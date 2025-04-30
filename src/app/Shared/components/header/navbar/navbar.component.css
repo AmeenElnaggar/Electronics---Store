@@ -1,0 +1,59 @@
+.navbar {
+  @apply w-full;
+}
+
+.navbar__links {
+  @apply flex flex-col justify-center  text-primary;
+  @apply lg:flex-row lg:items-center lg:justify-between;
+}
+
+.navbar__item {
+  @apply lg:px-0 lg:py-2;
+}
+
+.navbar__item-link {
+  @apply lg:text-xs xl:text-sm tracking-wider transition-all duration-[50ms];
+}
+
+.navbar__item:hover .navbar__item-link {
+  @apply border-b-[3px] border-black;
+}
+
+.navbar__dropdown__container {
+  @apply hidden absolute left-0 top-[calc(100%+3px)] w-full z-[2];
+}
+
+/* الدروب داون ذات نفسها بس لما تظهر عايز اي يتم */
+.navbar__item:hover .navbar__dropdown__container {
+  @apply block border-t-[1px] -mt-2;
+}
+
+.navbar__dropdown {
+  @apply max-w-[1760px] px-20 py-9 mx-auto flex items-start;
+}
+
+/* اللينكات الرئيسيه فلدروب دون */
+.navbar__dropdown-items {
+  @apply w-[74%] max-w-[1000px] flex flex-wrap items-start gap-x-24 gap-y-10;
+}
+
+.navbar__dropdown-link {
+  @apply hover:underline cursor-pointer font-semibold lg:text-sm xl:text-base;
+}
+
+/* ولاد اللينكات الاساسيه اللي فلدروب دون */
+.navbar__dropdown-childs {
+  @apply mt-3 flex flex-col justify-center gap-y-[6px];
+}
+
+.navbar__dropdown-child-link {
+  @apply hover:underline cursor-pointer xl:text-base lg:text-sm;
+}
+
+.navbar__dropdown-item-img {
+  @apply max-w-[500px] w-full max-h-[600px]  object-cover rounded-md;
+}
+
+.navbar__dropdown-item-image-title {
+  @apply mt-2 lg:text-base xl:text-lg uppercase font-medium text-primary text-center;
+}

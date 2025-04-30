@@ -1,0 +1,11 @@
+.header__search__form {
+  @apply h-10 relative lg:max-w-[480px]  mx-auto;
+}
+
+.header__search-input {
+  @apply bg-[#F6F5F5] pt-2 pl-12 pr-9 pb-[10px] border h-10 rounded-[100px] w-full text-sm placeholder:text-xs placeholder:uppercase placeholder:tracking-widest placeholder:text-primary outline-[1px] outline-[#787878];
+}
+
+.icon-search {
+  @apply w-5 h-auto absolute top-[50%] left-4 -translate-y-1/2 fill-[#787878];
+}

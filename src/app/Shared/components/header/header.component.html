@@ -1,0 +1,84 @@
+<header class="header">
+  <div class="header__announcement">
+    <div class="announcement__slider">
+      <p class="announcement__message">
+        Welcome! Get Competitive Prices on Electronics Components with
+        Electronics Hub!
+      </p>
+      <p class="announcement__message">Electronics - Hub</p>
+      <p class="announcement__message">
+        Discover the World of Electronics with Electronics Hub! 10% Off Your
+        First Order!
+      </p>
+      <p class="announcement__message">Electronics - Hub</p>
+      <p class="announcement__message">
+        Welcome! Get Competitive Prices on Electronics Components with
+        Electronics Hub!
+      </p>
+      <p class="announcement__message">Electronics - Hub</p>
+      <p class="announcement__message">
+        Discover the World of Electronics with Electronics Hub! 10% Off Your
+        First Order!
+      </p>
+    </div>
+  </div>
+
+  <div class="header__container">
+    <div class="header__toolbar">
+      <button
+        data-custom-event='{"event":"openNavigationMobile"}'
+        class="header__hamburger"
+        (click)="onClick()"
+        #headerHamburger
+      >
+        <span></span> <span></span> <span></span>
+      </button>
+
+      <!-- Logo -->
+      <h1 class="header__logo-title">
+        <a>Electronics Hub</a>
+      </h1>
+
+      <!-- Search Input -->
+      <div class="header__search">
+        <app-header-search />
+      </div>
+
+      <!-- Icons -->
+      <div class="header__icons">
+        <!-- Wishlist -->
+        <a class="header__icon header__icon__wishlist" href="/wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#787878" class="icon">
+            <path
+              d="M16.13 3.47c-2.22 1.18-3.53 3.18-3.53 3.18s-1.22-2-3.54-3.18C6.54 2.2 3 3.47 3 7.47 3 15.37 12.5 22 12.5 22S22 15.37 22 7.47c.2-4-3.34-5.27-5.87-4z"
+            ></path>
+          </svg>
+        </a>
+
+        <!-- Profile -->
+        <a class="header__icon" href="/profile">
+          <svg fill="none" viewBox="0 0 24 24" stroke="#787878" class="icon">
+            <path
+              d="M14.833 14.5H9.167c-3.13 0-5.667 2.686-5.667 6v1s2.951 1 8.5 1c5.549 0 8.5-1 8.5-1v-1c0-3.314-2.537-6-5.667-6ZM7.5 6.545C7.5 4.035 9.515 2 12 2s4.5 2.035 4.5 4.545S14.485 12 12 12 7.5 9.055 7.5 6.545Z"
+            ></path>
+          </svg>
+        </a>
+
+        <!-- Cart -->
+        <a class="header__icon header__icon__cart" href="/cart">
+          <svg viewBox="0 0 22 21" stroke="#787878" class="icon">
+            <g fill="none">
+              <path d="M16.814 19.833H5.02l-4.103-12h20z"></path>
+              <path d="M15.417 7.833v-2.5a4.5 4.5 0 10-9 0v2.5"></path>
+            </g>
+          </svg>
+          <div class="cart__count">12</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="header__navbar">
+      <app-navbar />
+    </div>
+  </div>
+</header>

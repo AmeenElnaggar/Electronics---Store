@@ -1,0 +1,53 @@
+<nav class="navbar">
+  <ul class="navbar__links">
+    @for (link of navLinks; track $index) {
+    <li class="navbar__item">
+      <a
+        class="navbar__item-link"
+        [routerLink]="link.path"
+        [innerHTML]="link.label"
+      >
+      </a>
+      @if (link?.subItems?.length) {
+      <!-- الـ Dropdown Container -->
+      <div class="navbar__dropdown__container">
+        <ul class="navbar__dropdown">
+          <div class="navbar__dropdown-items">
+            @for (subItem of link.subItems; track $index) {
+            <li class="navbar__dropdown-item">
+              <a class="navbar__dropdown-link" [innerHTML]="subItem.name"></a>
+              <!-- الـ Childs -->
+              @if (subItem?.childs?.length) {
+              <ul class="navbar__dropdown-childs">
+                @for (child of subItem.childs; track $index) {
+                <li class="navbar__dropdown-child">
+                  <a
+                    class="navbar__dropdown-child-link"
+                    [innerHTML]="child"
+                  ></a>
+                </li>
+                }
+              </ul>
+              }
+            </li>
+            }
+          </div>
+
+          <div class="navbar__dropdown-item-image">
+            <img
+              src="arduino-6060050_640.jpg"
+              alt=""
+              class="navbar__dropdown-item-img"
+              loading="lazy"
+            />
+            <p class="navbar__dropdown-item-image-title">
+              arduino-uno-r3-usb-cable-atmega328p
+            </p>
+          </div>
+        </ul>
+      </div>
+      }
+    </li>
+    }
+  </ul>
+</nav>
