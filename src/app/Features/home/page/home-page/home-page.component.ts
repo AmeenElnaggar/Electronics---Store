@@ -1,7 +1,14 @@
-import { Component, HostListener, signal } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  inject,
+  PLATFORM_ID,
+  signal,
+} from '@angular/core';
 import { SliderComponent } from '../../../../Shared/components/slider/slider.component';
 import { CategoryCardComponent } from '../../components/category-card/category-card.component';
 import { ProductCardComponent } from '../../../../Shared/components/product-card/product-card.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home-page',
@@ -10,6 +17,7 @@ import { ProductCardComponent } from '../../../../Shared/components/product-card
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent {
+  private platformId = inject(PLATFORM_ID);
   blogs = signal([
     {
       title: 'Ahmed Hamed CEO',
@@ -242,7 +250,9 @@ export class HomePageComponent {
   responsive = signal<boolean>(false);
 
   ngOnInit() {
-    this.checkIfMobile();
+    if (isPlatformBrowser(this.platformId)) {
+      this.checkIfMobile();
+    }
   }
 
   @HostListener('window:resize')
