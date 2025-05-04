@@ -20,7 +20,7 @@
 }
 
 .navbar__dropdown__container {
-  @apply hidden absolute left-0 top-[calc(100%+3px)] w-full z-[2];
+  @apply hidden absolute left-0 top-[calc(100%+3px)] w-full z-[2] bg-white;
 }
 
 /* الدروب داون ذات نفسها بس لما تظهر عايز اي يتم */

@@ -1,1 +1,92 @@
-<p>home-page works!</p>
+<main class="home">
+  <section class="home__main-slider">
+    <app-slider
+      [sliderMainData]="blogs()"
+      [sliderMetaData]="{ visibleNumber: 2, autoPlay: true }"
+      [cardType]="'blog'"
+    />
+  </section>
+
+  <!-- Main Categories  -->
+  <section class="home__categories">
+    @for (category of categories(); track $index) {
+    <div class="home__categories-item">
+      <app-category-card [categoryData]="category" />
+    </div>
+    }
+  </section>
+
+  <!-- New Products -->
+  <section class="home__newproducts">
+    <div class="newproducts__details">
+      <h3 class="newproducts__title">Our new products</h3>
+      <a class="newproducts__link">see all</a>
+    </div>
+    <app-slider
+      [sliderMainData]="newProducts()"
+      [sliderMetaData]="{
+        visibleNumber: responsive() ? 4 : 5,
+        autoPlay: false
+      }"
+      [cardType]="'product'"
+    />
+  </section>
+
+  <section class="home__banner">
+    <p class="banner__content">
+      <strong> "Empowering Innovators, One Circuit at a Time." </strong>
+      <span class="block"
+        >Discover quality components, cutting-edge tools, and everything you
+        need to bring your electronic ideas to life.</span
+      >
+    </p>
+  </section>
+
+  <!-- Brands -->
+  <section class="home__brands">
+    <div class="brands__details">
+      <h3 class="brands__title">Our brands</h3>
+      <a class="brands__link">see all brands</a>
+    </div>
+    <app-slider
+      [sliderMainData]="brands()"
+      [sliderMetaData]="{
+        visibleNumber: 4,
+        autoPlay: false
+      }"
+      [cardType]="'brands'"
+    />
+  </section>
+
+  <!-- New Products -->
+  <section class="home__bestsellers">
+    <div class="newproducts__details">
+      <h3 class="newproducts__title">Our bestsellers</h3>
+      <a class="newproducts__link">see all</a>
+    </div>
+    <app-slider
+      [sliderMainData]="newProducts()"
+      [sliderMetaData]="{
+        visibleNumber: responsive() ? 4 : 5,
+        autoPlay: false
+      }"
+      [cardType]="'product'"
+    />
+  </section>
+
+  <!-- Brands -->
+  <section class="home__newspaper">
+    <div class="newspaper__details">
+      <h3 class="newspaper__title">In the newspaper</h3>
+      <a class="newspaper__link">see all </a>
+    </div>
+    <app-slider
+      [sliderMainData]="blogs2()"
+      [sliderMetaData]="{
+        visibleNumber: 4,
+        autoPlay: false
+      }"
+      [cardType]="'brands'"
+    />
+  </section>
+</main>

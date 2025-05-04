@@ -1,0 +1,35 @@
+.service__highlights {
+  @apply w-full bg-[#F6F5F5];
+}
+
+.service__highlights-container {
+  @apply mt-12 py-12 border-t;
+}
+
+.service__highlights-grid {
+  @apply grid grid-cols-12 lg:gap-y-0 gap-y-4 justify-items-center;
+}
+
+.service__highlights-item {
+  @apply lg:col-span-3 md:col-span-6 col-span-12;
+}
+
+.service__highlights-content {
+  @apply flex items-center gap-x-4;
+}
+
+.service__highlights-icon {
+  @apply text-gray-500 text-xl;
+}
+
+.service__highlights-text {
+  @apply flex flex-col;
+}
+
+.service__highlights-title {
+  @apply font-semibold text-base;
+}
+
+.service__highlights-description {
+  @apply text-gray-500 text-sm;
+}

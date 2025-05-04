@@ -1,0 +1,25 @@
+<p-carousel
+  [value]="sliderMainData()"
+  [numVisible]="sliderMetaData().visibleNumber"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="sliderMetaData().autoPlay ? 6000 : false"
+  [showIndicators]="true"
+  [class]="{
+    'blog-slider': cardType() === 'blog'
+  }"
+>
+  <ng-template #item let-item let-index="index" let-last="last">
+    @if (cardType() === 'blog') {
+    <app-blog-card [blog]="item" />
+    } @if (cardType() === 'product') {
+    <div class="product__card">
+      <app-product-card [productData]="item" />
+    </div>
+    } @if (cardType() === 'brands') {
+    <div class="brand__card">
+      <app-category-card [categoryData]="item" />
+    </div>
+    }
+  </ng-template>
+</p-carousel>

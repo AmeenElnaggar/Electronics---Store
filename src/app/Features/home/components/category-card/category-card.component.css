@@ -1,0 +1,23 @@
+.category__container {
+  @apply w-full aspect-[16/18] cursor-pointer;
+}
+
+.category__link {
+  @apply block w-full h-full;
+}
+.category__image-container {
+  @apply relative w-full h-full overflow-hidden;
+}
+.category__image {
+  @apply w-full h-full object-cover;
+}
+.category__title {
+  @apply absolute bottom-0 left-0 lg:text-lg xl:text-xl w-full font-semibold text-white bg-black/50 px-2 py-1;
+}
+.category__description {
+  @apply mt-2 px-2 text-start font-serif text-primary lg:text-lg xl:text-xl;
+}
+
+.category__link:hover .category__image {
+  @apply transform scale-105 transition-transform duration-300;
+}

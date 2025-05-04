@@ -1,0 +1,19 @@
+<div class="category__container">
+  <a class="category__link">
+    <div class="category__image-container">
+      <img
+        [src]="categoryData().image.url"
+        [alt]="categoryData().image.alt"
+        class="category__image"
+        loading="lazy"
+      />
+      @if (categoryData().title) {
+      <span class="category__title">{{ categoryData().title }}</span>
+
+      }
+    </div>
+  </a>
+  <p class="category__description">
+    {{ categoryData().description }}
+  </p>
+</div>

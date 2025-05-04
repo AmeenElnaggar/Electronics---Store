@@ -1,0 +1,42 @@
+::ng-deep .p-carousel {
+  @apply relative w-full;
+}
+
+::ng-deep .p-carousel-content {
+  @apply relative w-full;
+}
+
+::ng-deep .p-carousel-prev-button,
+::ng-deep .p-carousel-next-button {
+  @apply text-white absolute top-[40%] transform -translate-y-1/2 z-[1] flex items-center justify-center;
+}
+
+::ng-deep .p-carousel-prev-button {
+  @apply left-2;
+}
+
+::ng-deep .p-carousel-next-button {
+  @apply right-2;
+}
+
+::ng-deep .p-carousel-prev-button svg,
+::ng-deep .p-carousel-next-button svg {
+  @apply w-8 h-8;
+}
+
+/* الستايل الجديد مع شرط blog-slider */
+.blog-slider ::ng-deep .p-carousel-item-start {
+  @apply pr-1;
+}
+
+.blog-slider ::ng-deep .p-carousel-item-end {
+  @apply pl-1;
+}
+
+.product__card {
+  @apply w-[97%];
+}
+
+.brand__card {
+  @apply p-1;
+}

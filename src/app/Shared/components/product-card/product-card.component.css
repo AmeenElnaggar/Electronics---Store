@@ -1,0 +1,59 @@
+.product__container {
+  @apply bg-white w-full overflow-hidden aspect-auto text-center  rounded-lg;
+}
+
+.product__link {
+  @apply relative  flex flex-col justify-center gap-y-2;
+}
+
+.product__image-container {
+  @apply w-full cursor-pointer;
+}
+
+.product__image {
+  @apply w-[450px] h-[300px] rounded-t-lg;
+}
+
+.product__status-container {
+  @apply absolute top-2 left-2;
+}
+
+.product__status {
+  @apply text-white text-sm uppercase bg-red-500 tracking-wider px-3 py-1 rounded-lg;
+}
+
+.product__heart {
+  @apply w-6 h-6 text-white transition-opacity duration-300 absolute top-2 right-2;
+}
+
+.product__title {
+  @apply text-center text-lg font-semibold cursor-pointer line-clamp-2;
+}
+
+.product__rating {
+  @apply flex items-center justify-center gap-x-[2px];
+}
+
+.product__rating-count {
+  @apply text-sm text-gray-400;
+}
+
+.product__price {
+  @apply text-lg font-semibold text-green-600;
+}
+
+.product__actions {
+  @apply flex xl:flex-row flex-col items-center gap-x-2 p-2;
+}
+
+.product__action {
+  @apply uppercase text-sm  tracking-widest w-full py-3 mt-3 cursor-pointer text-center rounded-md;
+}
+
+.product__action-buy {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white transform duration-150;
+}
+
+.product__action-add {
+  @apply bg-primary text-white hover:bg-gray-500 transform duration-150;
+}

@@ -1,0 +1,67 @@
+.home__categories {
+  @apply grid grid-cols-12 gap-x-2 mt-12 mb-8 bg-white;
+}
+
+.home__categories-item {
+  @apply col-span-3;
+}
+
+.home__newproducts {
+  @apply w-full bg-[#F5F0EC] p-10 pt-6;
+}
+
+.newproducts__details {
+  @apply flex items-center justify-between pt-1 pb-4;
+}
+
+.newproducts__title {
+  @apply text-3xl font-serif text-primary;
+}
+
+.newproducts__link {
+  @apply text-primary border-b border-primary tracking-widest cursor-pointer text-sm uppercase;
+}
+
+.home__banner {
+  @apply w-full h-[160px] bg-white flex items-center justify-center text-center px-4;
+}
+
+.banner__content {
+  @apply text-lg sm:text-xl  text-primary;
+}
+
+.home__brands {
+  @apply w-full bg-[#F5F0EC]  pt-6 pb-4 border-b border-gray-300;
+}
+
+.brands__details {
+  @apply flex items-center justify-between pt-1 px-10 pb-4;
+}
+
+.brands__title {
+  @apply text-3xl font-serif text-primary;
+}
+
+.brands__link {
+  @apply text-primary border-b border-primary tracking-widest cursor-pointer text-sm uppercase;
+}
+
+.home__bestsellers {
+  @apply w-full bg-[#F5F0EC] p-8 pt-6;
+}
+
+.home__newspaper {
+  @apply w-full pt-8 pb-4;
+}
+
+.newspaper__details {
+  @apply flex items-center justify-between pt-1 px-10 pb-4;
+}
+
+.newspaper__title {
+  @apply text-3xl font-serif text-primary;
+}
+
+.newspaper__link {
+  @apply text-primary border-b border-primary tracking-widest cursor-pointer text-sm uppercase;
+}

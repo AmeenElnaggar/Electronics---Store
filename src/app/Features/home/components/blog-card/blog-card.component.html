@@ -1,0 +1,14 @@
+<div class="blog__image-container">
+  <img
+    [src]="blog()?.image.url"
+    [alt]="blog().image.alt"
+    loading="lazy"
+    class="blog__image"
+  />
+</div>
+<div class="blog__metadata">
+  <p class="blog__title">{{ blog().title }}</p>
+  <button class="blog__action">
+    <a class="blog__link"> discover </a>
+  </button>
+</div>

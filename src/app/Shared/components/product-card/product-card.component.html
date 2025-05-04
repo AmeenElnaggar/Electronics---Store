@@ -1,0 +1,66 @@
+<div class="product__container">
+  <a class="product__link">
+    <div class="product__image-container">
+      <img
+        [src]="productData().image.url"
+        [alt]="productData().image.alt"
+        class="product__image"
+        loading="lazy"
+      />
+      <div class="product__status-container">
+        @if (productData().status !== '') {
+        <span class="product__status">{{ productData().status }}</span>
+
+        }
+      </div>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        class="product__heart"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          stroke="#fff"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <p class="product__title">{{ productData().title }}</p>
+    <div class="product__rating">
+      @for (i of [1, 2, 3, 4, 5]; track $index) {
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        class="product__star"
+      >
+        <path
+          d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+          [attr.fill]="'#FFD700'"
+          [attr.stroke]="'#FFD700'"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      }
+      <span class="product__rating-count">(269)</span>
+    </div>
+    <p class="product__description">
+      Reliable power sources for all electronic components.
+    </p>
+    <p class="product__price">
+      {{ productData().price | currency : "EGP" }}
+    </p>
+  </a>
+
+  <div class="product__actions">
+    <button class="product__action product__action-buy">buy it now</button>
+    <button class="product__action product__action-add">add to basket</button>
+  </div>
+</div>
